@@ -53,4 +53,15 @@ public class SacramentoUtil {
             maximumOfGrid = 0;
         }
     }
+
+    public static void getStreets(ArrayList<Sacramento> arrayList) {
+
+        for (Sacramento item : arrayList) {
+
+            if(item.getAddress().contains(" ST")){
+
+                System.out.println(item);
+            }
+        }
+    }
 }

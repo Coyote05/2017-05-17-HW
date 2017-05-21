@@ -48,5 +48,7 @@ public class Main {
         sacramentoUtil.printCSVFromSacramentoList(arrayList, "C:\\Users\\C\\IdeaProjects\\2017-05-17-HW\\src\\hu\\helixlab\\homework\\homework10\\Target.csv");
 
         sacramentoUtil.findBiggestGridByDistricts(arrayList);
+
+        sacramentoUtil.getStreets(arrayList);
     }
 }
