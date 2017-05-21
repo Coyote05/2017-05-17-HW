@@ -22,4 +22,35 @@ public class SacramentoUtil {
             System.out.println("IOException - " + e.getMessage());
         }
     }
+
+    public static void findBiggestGridByDistricts(ArrayList<Sacramento> arrayList) {
+
+        int numberOfDistrict = 1;
+        int maximumOfGrid = 0;
+
+        for (int i = 1; i < 7; i++) {
+
+            for (Sacramento item : arrayList) {
+
+                if (item.getDistrict() == numberOfDistrict) {
+
+                    if (item.getGrid() > maximumOfGrid) {
+
+                        maximumOfGrid = item.getGrid();
+                    }
+                }
+            }
+
+            for (Sacramento item : arrayList) {
+
+                if (item.getGrid() == maximumOfGrid) {
+
+                    System.out.println(item);
+                    break;
+                }
+            }
+            numberOfDistrict++;
+            maximumOfGrid = 0;
+        }
+    }
 }
