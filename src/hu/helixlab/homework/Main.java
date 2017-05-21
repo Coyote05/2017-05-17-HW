@@ -50,5 +50,7 @@ public class Main {
         sacramentoUtil.findBiggestGridByDistricts(arrayList);
 
         sacramentoUtil.getStreets(arrayList);
+
+        sacramentoUtil.countCrimeType(arrayList, "THEFT");
     }
 }

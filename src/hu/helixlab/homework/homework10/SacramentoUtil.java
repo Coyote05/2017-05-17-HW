@@ -64,4 +64,20 @@ public class SacramentoUtil {
             }
         }
     }
+
+    public static int countCrimeType(ArrayList<Sacramento> arrayList, String crimeType) {
+
+        int quantity = 0;
+
+        for (Sacramento item : arrayList) {
+
+            if (item.getCrimedescr().contains(crimeType)) {
+
+                quantity++;
+            }
+        }
+        System.out.println("There were " + quantity + " crimes from this type: " + crimeType);
+
+        return quantity;
+    }
 }
