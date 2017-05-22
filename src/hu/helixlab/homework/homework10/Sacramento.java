@@ -2,7 +2,7 @@ package hu.helixlab.homework.homework10;
 
 public class Sacramento {
 
-    private String cdTime;
+    private String cDateTime;
     private String address;
     private int district;
     private String beat;
@@ -12,8 +12,8 @@ public class Sacramento {
     private float latitude;
     private float longitude;
 
-    public void setCdTime(String cdTime) {
-        this.cdTime = cdTime;
+    public void setCDateTime(String cDateTime) {
+        this.cDateTime = cDateTime;
     }
 
     public String getAddress() {
@@ -80,14 +80,14 @@ public class Sacramento {
         this.longitude = longitude;
     }
 
-    public String getCdTime() {
-        return cdTime;
+    public String getcDateTime() {
+        return cDateTime;
     }
 
     @Override
     public String toString() {
         return "Sacramento{" +
-                "cdTime='" + cdTime + '\'' +
+                "cdTime='" + cDateTime + '\'' +
                 ", address='" + address + '\'' +
                 ", district=" + district +
                 ", beat='" + beat + '\'' +

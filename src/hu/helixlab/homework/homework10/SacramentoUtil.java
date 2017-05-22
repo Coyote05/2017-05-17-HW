@@ -13,8 +13,8 @@ public class SacramentoUtil {
 
             for (Sacramento item : arrayList) {
 
-                fileWriter.write(String.valueOf(item));
-                fileWriter.write("\n");
+                fileWriter.append(item.getcDateTime() + "," + item.getAddress() + "," + item.getDistrict() + "," + item.getBeat() + "," + item.getGrid() + "," + item.getCrimedescr() + "," + item.getUcr_ncic_code() + "," + item.getLatitude() + "," + item.getLongitude());
+                fileWriter.append("\n");
             }
             fileWriter.close();
 

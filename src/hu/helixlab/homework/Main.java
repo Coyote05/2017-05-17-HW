@@ -25,7 +25,7 @@ public class Main {
 
                 Sacramento sacramento = new Sacramento();
                 String[] splitLine = line.split(",");
-                sacramento.setCdTime(splitLine[0]);
+                sacramento.setCDateTime(splitLine[0]);
                 sacramento.setAddress(splitLine[1]);
                 sacramento.setDistrict(Integer.parseInt(splitLine[2]));
                 sacramento.setBeat(splitLine[3]);
