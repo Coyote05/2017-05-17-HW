@@ -27,10 +27,16 @@ public class SacramentoUtil {
 
         int numberOfDistrict = 1;
         int maximumOfGrid = 0;
+        int maximumOfDistricts = 0;
 
-        for (int i = 1; i < 7; i++) {
+        for (int i = 1; i < maximumOfDistricts; i++) {
 
             for (Sacramento item : arrayList) {
+
+                if (item.getDistrict() > maximumOfDistricts) {
+
+                    maximumOfDistricts = item.getDistrict();
+                }
 
                 if (item.getDistrict() == numberOfDistrict) {
 
