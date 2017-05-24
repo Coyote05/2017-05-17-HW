@@ -3,6 +3,8 @@ package hu.helixlab.homework.homework10;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SacramentoUtil {
 
@@ -25,38 +27,26 @@ public class SacramentoUtil {
 
     public static void findBiggestGridByDistricts(ArrayList<Sacramento> arrayList) {
 
-        int numberOfDistrict = 1;
-        int maximumOfGrid = 0;
-        int maximumOfDistricts = 0;
 
-        for (int i = 1; i < maximumOfDistricts; i++) {
+        HashMap<Integer, Sacramento> hashMap = new HashMap<>();
 
-            for (Sacramento item : arrayList) {
+        for (Sacramento item : arrayList) {
 
-                if (item.getDistrict() > maximumOfDistricts) {
+            if (hashMap.containsKey(item.getGrid()) == true) {
 
-                    maximumOfDistricts = item.getDistrict();
+                if (hashMap.get(item.getDistrict()).getGrid() < item.getGrid()) {
+
+                    hashMap.put(item.getDistrict(), item);
                 }
 
-                if (item.getDistrict() == numberOfDistrict) {
+            } else {
 
-                    if (item.getGrid() > maximumOfGrid) {
-
-                        maximumOfGrid = item.getGrid();
-                    }
-                }
+                hashMap.put(item.getDistrict(), item);
             }
+        }
+        for (Map.Entry item : hashMap.entrySet()) {
 
-            for (Sacramento item : arrayList) {
-
-                if (item.getGrid() == maximumOfGrid) {
-
-                    System.out.println(item);
-                    break;
-                }
-            }
-            numberOfDistrict++;
-            maximumOfGrid = 0;
+            System.out.println(item.getValue());
         }
     }
 
